@@ -1,0 +1,156 @@
+:root{
+    --main-color:#F0F0F0;
+    --sec-color:#000088;
+    --additive:#FFFFFF;
+}
+body{
+    height: 100svh;
+    width: 100%;
+    background-color: var(--main-color);
+    overflow: hidden;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.container h1{
+    color: var(--sec-color);
+    text-align: center;
+}
+.container .container_inner{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.container .container_inner .container_wrapper{
+    display: grid;
+    grid-template-rows: 300px 1fr;
+}
+.container_wrapper .form_holder{
+    display: flex;
+    align-items: center;
+}
+.container_wrapper .form_holder form{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.container_wrapper .form_holder form .form-group{
+    margin-block: 3px;
+    display: flex;
+}
+.container_wrapper .form_holder form .form-group .lbl_holder{
+    font-size: 17px;
+    color: var(--sec-color);
+    width: 120px;
+    padding: 0px;
+    margin: 0px;
+    text-align: right;
+    margin-right: 5px;
+}
+.container_wrapper .form_holder form .form-group input{
+    min-width: 250px;
+    height: 30px;
+    border: none;
+    background-color: var(--additive);
+    color: var(--sec-color);
+    outline: none;
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.button_holder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.button_holder button{
+    width: 120px;
+    height: 30px;
+    font-size: 13px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--additive);
+    color: var(--sec-color);
+}
+.button_holder button[type='submit']{
+    background-color: var(--sec-color);
+    color: var(--main-color);
+}
+.messages_holder{
+    display: block;
+    position: relative;
+}
+.messages_holder h6{
+    font-size: 17px;
+    color: var(--sec-color);
+}
+.messages_holder .message_wrapper{
+    width: 100%;
+    padding: 3px;
+    display: block;
+    position: relative;
+}
+.message_input_div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    position: relative;
+}
+.message_input_div .message_input{
+    flex: 1;
+    width: 250px;
+    height: 30px;
+    border: none;
+    background-color: var(--additive);
+    color: var(--sec-color);
+    outline: none;
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 7px 40px 7px 5px;
+    height: min-content;
+    padding-right: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.message_input_div button{
+    background-color: var(--sec-color);
+    color: var(--additive);
+    box-shadow: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    height: 30px;
+    width: 38px;
+    font-size: 12px;
+    border-radius: 10px;
+}
+.alert{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    
+}
+.alert label{
+    background-color: var(--sec-color);
+    color: var(--additive);
+    font-size: 12px;
+    border-radius: 5px;
+    line-height: 25px;
+    width: 150px;
+    text-align: center;
+}

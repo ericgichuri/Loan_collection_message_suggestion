@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <script src="{{url_for('static',filename='jquery.min.js')}}"></script>
+    <title>Message Suggestion</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Collection Message Suggestion</h1>
+        <div class="container_inner">
+            <div class="container_wrapper">
+                <div class="form_holder">
+                    <form method="post" class="form">
+                        <div class="form-group">
+                            <div class="lbl_holder">
+                                <label>Overdue Days: </label>
+                            </div>
+                            <input type="number" name="overdue_days" placeholder="eg: 2" value="1" min="0">
+                        </div>
+                        <div class="form-group">
+                            <div class="lbl_holder">
+                                <label>Amount Paid: </label>
+                            </div>
+                            <input type="number" name="paid_amount" placeholder="eg: 100" min="0">
+                        </div>
+                        <div class="form-group">
+                            <div class="lbl_holder">
+                                <label>Loan Balance: </label>
+                            </div>
+                            <input type="number" name="loan_balance" placeholder="eg: 100" min="0">
+                        </div>
+                        <div class="form-group">
+                            <div class="lbl_holder">
+                                <label>Times Borrowed: </label>
+                            </div>
+                            <input type="number" name="no_of_times_borrowed" placeholder="eg: 1" value="1" min="0">
+                        </div>
+                        <div class="form-group">
+                            <div class="button_holder">
+                                <button type="reset">Reset</button>
+                                <button type="submit">Get Messages</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="messages_holder">
+                    <h6>Suggested Messages</h6>
+                    <div class="message_wrapper">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="{{url_for('static',filename='script.js')}}"></script>
+</body>
+</html>
